@@ -4,17 +4,17 @@
       <img src="~/static/6.jpg" alt="" class="object-cover">
     </div>
     <div class="bg-white w-11/12 mx-auto p-4 rounded-xl -mt-14 relative z-10 shadow-lg">
-      <h4 class="">
+      <h4 class="text-small uppercase">
         Some
       </h4>
-      <div class="">
-        Some
+      <div class="title-small">
+        Some title
       </div>
-      <div class="">
-        Some
+      <div class="text-small">
+        Some long-long description. Carnivorous starlight travels lead to the resistance.
       </div>
-      <div class="">
-        Some
+      <div class="text-small text-right">
+        Another text
       </div>
     </div>
   </div>

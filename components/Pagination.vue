@@ -1,9 +1,9 @@
 <template>
   <div class="flex justify-around">
-    <button class="block text-lg rounded-xl border py-2 mt-4 px-6 cursor-pointer" type="button">
+    <button class="btn-gray" type="button">
       Prev
     </button>
-    <button class="block text-lg rounded-xl border py-2 mt-4 px-6 cursor-pointer" type="button">
+    <button class="btn-gray" type="button">
       Next
     </button>
   </div>

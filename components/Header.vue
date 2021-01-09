@@ -14,19 +14,19 @@
         </div>
         <div class="ml-auto">
           <div class="flex items-center">
-            <nuxt-link to="/" class="block mr-4">
+            <nuxt-link to="/" class="link-gray">
               Home
             </nuxt-link>
-            <nuxt-link to="list" class="block mr-4">
+            <nuxt-link to="list" class="link-gray">
               List
             </nuxt-link>
-            <nuxt-link to="detail" class="block mr-4">
+            <nuxt-link to="detail" class="link-gray mr-16">
               Detail
             </nuxt-link>
           </div>
         </div>
         <div class="">
-          <button class="px-4 py-2 border rounded" type="button">
+          <button class="btn-gray" type="button">
             Button
           </button>
         </div>
