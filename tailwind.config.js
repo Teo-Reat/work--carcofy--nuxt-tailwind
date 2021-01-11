@@ -21,8 +21,11 @@ module.exports = {
       addComponents({
         '.container': {
           maxWidth: '100%',
+          padding: '0 10px',
           '@screen sm': {
-            maxWidth: '540px'
+            maxWidth: '540px',
+            // eslint-disable-next-line
+            padding: '0',
           },
           '@screen md': {
             maxWidth: '720px'
@@ -35,6 +38,7 @@ module.exports = {
           }
         }
       })
-    }
+    },
+    require('tailwind-hamburgers')
   ]
 }

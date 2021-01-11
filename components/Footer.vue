@@ -1,7 +1,7 @@
 <template>
-  <footer class="pt-8 mt-auto border-t">
+  <footer class="pt-4 lg:pt-8 mt-auto border-t">
     <div class="container mx-auto">
-      <div class="w-1/4 mx-auto flex justify-between">
+      <div class="lg:w-1/4 mx-auto flex justify-around lg:justify-between">
         <nuxt-link to="/" class="link-gray">
           Home
         </nuxt-link>
@@ -12,7 +12,7 @@
           Detail
         </nuxt-link>
       </div>
-      <div class="text-center py-4 text-gray-500">
+      <div class="text-center py-2 lg:py-4 text-gray-500">
         Some copyrights
       </div>
     </div>

@@ -7,11 +7,18 @@
             Main Logo
           </nuxt-link>
         </div>
-        <div class="block lg:hidden">
-          <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-            <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-          </button>
+        <div class="px-2 py-2 border cursor-pointer rounded lg:hidden" @click="mobileMenu = !mobileMenu">
+          <div class="tham tham-e-squeeze tham-w-6" :class="{ 'tham-active': mobileMenu}">
+            <div class="tham-box">
+              <div class="tham-inner bg-gray-600" />
+            </div>
+          </div>
         </div>
+        <!--        <div class="block lg:hidden">-->
+        <!--          <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">-->
+        <!--            <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>-->
+        <!--          </button>-->
+        <!--        </div>-->
         <div class="ml-auto">
           <div class="flex items-center">
             <nuxt-link to="/" class="link-gray">
@@ -37,6 +44,11 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data: () => {
+    return {
+      mobileMenu: false
+    }
+  }
 }
 </script>
