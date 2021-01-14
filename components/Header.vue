@@ -7,6 +7,7 @@
             Main Logo
           </nuxt-link>
         </div>
+        <div>{{ $route.params }}</div>
         <div class="px-2 py-2 border cursor-pointer rounded lg:hidden" @click="mobileMenu = !mobileMenu">
           <div class="tham tham-e-squeeze tham-w-6" :class="{ 'tham-active': mobileMenu}">
             <div class="tham-box">

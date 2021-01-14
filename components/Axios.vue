@@ -1,13 +1,19 @@
 <template>
-$END$
+  <div />
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-name: "Axios"
+  name: 'Axios',
+
+  mounted () {
+    this.fetchDataFlat()
+  },
+
+  methods: {
+    ...mapActions(['fetchDataFlat'])
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
