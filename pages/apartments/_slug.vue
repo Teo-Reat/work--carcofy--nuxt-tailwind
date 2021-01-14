@@ -16,27 +16,8 @@
       </h2>
       <div class="flex mt-4">
         <!--        Галерея-->
-        <div class="border rounded-xl shadow w-2/3 h-600 flex-shrink-0">
-          <!--          <div class="relative w-full h-2/3">-->
-          <!--            <img class="h-full w-full object-cover border-4 border-white rounded-t-xl" src="~/static/1.jpg" alt="">-->
-          <!--            <div class="overlay-element border-4 border-white rounded-t-xl" />-->
-          <!--          </div>-->
-          <Slider :flat="flat" :loading="loading">
-            <!--            <div class="flex">-->
-            <!--              <div class="w-1/3 h-full border-4 border-white relative">-->
-            <!--                <img class="h-full w-full object-cover rounded-bl-xl" src="~/static/2.jpg" alt="">-->
-            <!--                <div class="overlay-element rounded-bl-xl" />-->
-            <!--              </div>-->
-            <!--              <div class="w-1/3 h-full border-4 border-white relative">-->
-            <!--                <img class="h-full w-full object-cover" src="~/static/4.jpg" alt="">-->
-            <!--                <div class="overlay-element" />-->
-            <!--              </div>-->
-            <!--              <div class="w-1/3 h-full border-4 border-white relative">-->
-            <!--                <img class="h-full w-full object-cover rounded-br-xl" src="~/static/5.jpg" alt="">-->
-            <!--                <div class="overlay-element rounded-br-xl" />-->
-            <!--              </div>-->
-            <!--            </div>-->
-          </Slider>
+        <div class="rounded-xl w-2/3 flex-shrink-0">
+          <Slider :flat="flat" />
         </div>
 
         <!--        Калькулятор стоимости-->
@@ -125,8 +106,8 @@ export default {
 
   data: () => {
     return {
-      flat: {},
-      loading: false
+      flat: {}
+      // loading: false
     }
   },
 
@@ -142,10 +123,10 @@ export default {
     ...mapActions(['fetchDataFlat']),
 
     getFlatFromServer () {
-      this.loading = true
+      // this.loading = true
       axios.get('https://api.te-rent.com/v1/apartments/' + this.slug)
         .then(response => (this.flat = response.data.data))
-        .finally(() => { this.loading = false })
+        // .finally(() => { this.loading = false })
     },
 
     thisFlat () {

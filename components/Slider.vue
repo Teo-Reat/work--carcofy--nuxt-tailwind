@@ -1,30 +1,18 @@
 <template>
-  <div class="slider relative overflow-hidden">
-    <div class="bg-green-300 h-16 overflow-hidden">
-      {{ flat }}
+  <div class="slider relative h-600">
+    <div class="relative w-full h-2/3">
+      <img class="h-full w-full object-cover border-b-4 border-white rounded-t-xl" :src="flat['main_image']" alt="Main image">
+      <div class="overlay-element border-b-4 border-white rounded-t-xl" />
     </div>
-    <div class="bg-blue-200">
-      {{ loading }}
-    </div>
-    <div class="bg-blue-300">
-      {{ displayed }}
-    </div>
-    <div class="h-48 bg-purple-100">
-      <img :src="flat['main_image']" alt="" class="">
-    </div>
-    <button class="w-full" @click="goToPrev">
-      prev
-    </button>
-    <div class="line flex">
+    <div class="h-1/3 flex relative">
+      <!--      <button class="w-4 h-full absolute top-0 -left-4 bg-red-500 z-20 border-4 border-white focus:outline-none" @click="goToPrev" />-->
       <Slide v-for="(slide, key) in displayed" :key="key">
         <slot>
-          <img :src="flat.images[slide]" alt="">
+          <img :src="flat.images[slide]" class="object-cover h-full w-full" alt="Photo">
         </slot>
       </Slide>
+      <!--      <button class="w-4 h-full absolute top-0 -right-4 bg-red-500 z-20 border-4 border-white focus:outline-none" @click="goToNext" />-->
     </div>
-    <button class="w-full" @click="goToNext">
-      next
-    </button>
   </div>
 </template>
 
@@ -43,16 +31,15 @@ export default {
     flat: {
       type: Object,
       required: true
-    },
-    loading: {
-      type: Boolean,
-      required: true
     }
+    // loading: {
+    //   type: Boolean,
+    //   required: true
+    // }
   },
 
   data: () => {
     return {
-      // slides: [0, 1, 2, 3, 4, 5, 6, 7, 8],
       current: 0
     }
   },
@@ -60,6 +47,7 @@ export default {
   computed: {
     ...mapGetters(['getDataFlat']),
 
+    // Отобржает 3 из n картинок если объект flat не пустой
     displayed () {
       if (!(Object.keys(this.flat).length === 0 && this.flat.constructor === Object)) {
         return [

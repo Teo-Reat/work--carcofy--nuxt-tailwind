@@ -14,7 +14,10 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      borderRadius: ['first', 'last'],
+      borderWidth: ['first', 'last']
+    }
   },
   plugins: [
     function ({ addComponents }) {

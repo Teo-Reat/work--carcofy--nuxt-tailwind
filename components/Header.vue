@@ -25,12 +25,12 @@
             <nuxt-link to="/" class="link-gray">
               Home
             </nuxt-link>
-            <nuxt-link to="list" class="link-gray">
+            <nuxt-link to="/apartments" class="link-gray">
               List
             </nuxt-link>
-            <nuxt-link to="detail" class="link-gray mr-16">
-              Detail
-            </nuxt-link>
+            <!--            <nuxt-link to="detail" class="link-gray mr-16">-->
+            <!--              Detail-->
+            <!--            </nuxt-link>-->
           </div>
         </div>
         <div class="">
