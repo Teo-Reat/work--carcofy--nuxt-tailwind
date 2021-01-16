@@ -12,7 +12,7 @@
     <!--    </div>-->
     <div class="container mx-auto">
       <h2 class="title-big">
-        Product title
+        {{ flat.title }}
       </h2>
       <div class="flex mt-4">
         <!--        Галерея-->

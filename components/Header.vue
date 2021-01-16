@@ -33,9 +33,21 @@
             <!--            </nuxt-link>-->
           </div>
         </div>
-        <div class="">
+        <div v-if="$auth.loggedIn" class="">
+          <div class="">
+            <!--            username-->
+            {{ $auth.user.email }}
+          </div>
           <button class="btn-gray" type="button">
-            Button
+            Logout
+          </button>
+        </div>
+        <div v-else class="">
+          <button class="">
+            Login
+          </button>
+          <button class="">
+            Register
           </button>
         </div>
       </nav>
